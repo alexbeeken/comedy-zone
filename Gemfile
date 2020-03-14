@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # Use sqlite3 as the database for Active Record
@@ -59,3 +60,37 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'foundation-rails', '~> 5.5'
+gem 'high_voltage'
+gem 'jquery-rails'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'pg'
+gem 'simple_form'
+gem 'slim-rails'
+gem 'therubyracer', :platform=>:ruby
+
+group :development do
+  gem 'better_errors'
+  gem 'haml2slim'
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'rails_apps_pages'
+  gem 'rails_apps_testing'
+  gem 'rails_layout'
+  gem 'spring-commands-rspec'
+end
+
+group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'launchy'
+end
+

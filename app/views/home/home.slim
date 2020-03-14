@@ -1,0 +1,9 @@
+body
+  h1 Welcome to The Portland Comedy Zone
+
+  div class='row'
+    = button_to('Login with Facebook', '/auth/facebook', { method: :post })
+
+  - if Rails.env.development?
+    div class='row'
+      = button_to('Login for Testing', '/auth/developer', { method: :post })
